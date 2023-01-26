@@ -150,7 +150,14 @@ export type Props = {
    * @default expandOnContentDrag === false
    */
   expandOnContentDrag?: boolean,
+  /**
+  * Id of element for portal
+  * */
   elementId?: string;
+  /**
+  * is backdrop draggable
+  * */
+  isBackdropDraggable?: boolean;
 } & Omit<React.PropsWithoutRef<JSX.IntrinsicElements['div']>, 'children'>
 
 export interface RefHandles {

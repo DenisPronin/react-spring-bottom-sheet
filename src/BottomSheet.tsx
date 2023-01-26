@@ -69,6 +69,7 @@ export const BottomSheet = React.forwardRef<
     onSpringEnd,
     reserveScrollBarGap = blocking,
     expandOnContentDrag = false,
+    isBackdropDraggable= true,
     ...props
   },
   forwardRef
@@ -643,7 +644,7 @@ export const BottomSheet = React.forwardRef<
           // that clips this element to the container, not allowing it to cover the full page.
           key="backdrop"
           data-rsbs-backdrop
-          {...bind({ closeOnTap: true })}
+          {...(isBackdropDraggable ? bind({ closeOnTap: true }) : {})}
         />
       )}
       <div
