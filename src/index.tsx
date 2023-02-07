@@ -77,7 +77,6 @@ export const BottomSheet = forwardRef<RefHandles, Props>(function BottomSheet(
     <Portal data-rsbs-portal node={document && document.getElementById(elementId)}>
       <_BottomSheet
         {...props}
-        elementId={elementId}
         lastSnapRef={lastSnapRef}
         ref={ref}
         initialState={initialStateRef.current}
